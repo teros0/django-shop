@@ -1,200 +1,31 @@
-$red:red;
 $font:"Raleway", sans-serif;
-body{
-	overflow: hidden;
-	a:hover, a:visited, a:active, a:focus{
-		text-decoration: none;
-		color: #000;
-	}
-}
-header{
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 100;
-	height: 50px;
-	line-height: 50px;
-	.logo{
-		position: relative;
-		a{
-			margin: 0 auto;
-			position: absolute;
-			top: 0;
-			left: 44%;
-			display:inline-block;
-			color: black; 
-			text-decoration: none;
-			h1{
-			font-family:"Raleway" ;
-			font-weight: 900;
-			line-height: 50%;
-			}
-		}
-	}
-	.menu_toggle:hover span{
-		opacity: 1;
-		
-	}
-	.menu_toggle{
-		margin-left: 30px;
-		font-size: 20px;
-		float: left;
-		color:black;
-		text-align: left;
-		position: relative;
-		span{
-			-webkit-transition: all 0.5s;
-			-moz-transition: all 0.5s;
-			transition: all 0.5s;
-			opacity: 0;
-			margin-left: 20px;
-			line-height: 20px; 
-			text-transform: uppercase;
-			font-family: $font;
-			font-size:11px;
-			letter-spacing: 4px;
-		}
-		
-	}
-	.cart{
-		float: right;
-		font-size: 20px;
-		margin-right: 20px;
 
-	}
-
+.wrapper{
+	padding-top: 50px;
 }
-.sidemenu{
-	position: fixed;
-	width: 281px;
-	height: auto;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-	background: #1D1D1F;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	letter-spacing: .1875rem;
-	min-height: 500px;
-	z-index: 99;
-	-webkit-transform: translate3d(-281px, 0, 0);
-	-moz-transform: translate3d(-281px, 0, 0);
-	-ms-transform: translate3d(-281px, 0, 0);
-	-o-transform: translate3d(-281px, 0, 0);
-	transform: translate3d(-281px, 0, 0);
-	.head-sidemenu{
-		-webkit-transform: translate3d(0, -70px, 0);
-		-moz-transform: translate3d(0, -70px, 0);
-		-ms-transform: translate3d(0, -70px, 0);
-		-o-transform: translate3d(0, -70px, 0);
-		transform: translate3d(0, -70px, 0);
-		height: 50px;
-    	vertical-align: 100px;
-		a{ 
-			float: left;
-			display:block;
-			padding: 0;
-			height: 50px;
-			width: 33.3%;
-			border: 1px solid white;
-			background-color: transparent;
-			text-align: center;
-			color:#fff;
-			i{
-				line-height: 50px;
-				font-size: 20px;
-			}
-		}
-		a:hover{
-			color: $red;
-		}
-	}
-	.head-sidemenu-vis{
-		-webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
-		-ms-transform: translate3d(0, 0, 0);
-		-o-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-		-webkit-transition: all 1.2s;
-		-moz-transition: all 1.2s;
-		transition: all 1.2s;
-	}
-	.menu{
+.catalog-item-mg{
+	img{
+		margin-bottom: 20px;}
+}
+.catalog-item-info{
+	padding-top: 10px;
+	span{
+		padding-bottom: 3px;
 		text-transform: uppercase;
-		font-family: "Raleway", sans-serif;
+		display: block;
+		text-align: center;
+		font-family: $font;
+		letter-spacing: 2px;
+	}
+	.product-title-small{
+		font-size: 9px;
+		font-weight: 400;
+	}
+	.product-firm{
 		font-weight: 600;
-		font-size: 10px;
-		margin-top: 130px;
-		ul{
-			padding: 0;
-			width: 100%;
-			list-style: none;
-		}
-		a{
-			color:white;
-			letter-spacing: .1875rem;
-			display: block;
-			text-decoration: none;
-		}
-		li{
-			padding: 9px 30px;
-		}
-
-		li:hover a{
-			color: $red;
-		}
-		li:hover{
-			padding-left: 45px;
-			-webkit-transition: all 0.5s;
-			-moz-transition: all 0.5s;
-			transition: all 0.5s;
-		}
-		.active{
-			background-color: #121212;
-			a{
-				color: $red;
-			}
-		}
+	}
+	.catalog-item-price{
+		font-weight:500;
+		font-size: 12px;
 	}
 }
-
-.sidemenu_vis{
-	-webkit-transform: translate3d(0, 0, 0);
-	  -moz-transform: translate3d(0, 0, 0);
-	  -ms-transform: translate3d(0, 0, 0);
-	  -o-transform: translate3d(0, 0, 0);
-	  transform: translate3d(0, 0, 0); 
-}
-.form-control{
-	margin-top: 10px;
-	margin-right: 10%;
-	float: right;
-	display: inline-block;
-	width: 40px;
-	padding: 0;
-	border: none;
-	box-shadow: none;
-	color: black;
-}
-.form-control:focus{
-	border:1px solid black;
-}
-.valute{
-	margin-top: 10px;
-	margin-right: 10%;
-}
-.lang{
-	margin-right: 3%;
-}
-.w_for_menu, .header_f_m{
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
-	transform:translate3d(281px,0,0);
-}
-.w_for_menu{
-	background-color:rgba(0,0,0,.3);}
