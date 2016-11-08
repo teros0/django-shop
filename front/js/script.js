@@ -1,0 +1,13 @@
+$(document).ready(function(){
+	$(".menu_toggle").click(function(){
+		$(".sidemenu").toggleClass("sidemenu_vis");
+		$(".head-sidemenu").toggleClass("head-sidemenu-vis");
+		$(".wrapper").toggleClass("w_for_menu");
+		$("header").toggleClass("header_f_m");
+	})
+	$(".header_f_m").click(function(){
+		$(".sidemenu").toggleClass("sidemenu_vis");
+		$(".wrapper").toggleClass("w_for_menu");
+		$("header").toggleClass("w_for_menu");
+	})
+})
