@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="libs/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,800" rel="stylesheet">
     <link rel="stylesheet" href="css/shop.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/perm_items.css">
+     <script src="js/script.js"></script>
 
   </head>
   <body>
@@ -37,7 +38,7 @@
         <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
       </div>
       <div class="menu">
-        <ul>
+        <ul class="ul_menu">
           <li class="active" ><a href="#">Shop</a></li>
           <li class="sub_par"><a href="#">Not available</a></li>
           <li><a href="#">About</a></li>
@@ -47,12 +48,86 @@
         </ul>
       </div>
     </div>
+    <div class="cart">
+      <div class="cart_top">
+        <div class="cart_table">
+          <table>
+            <tbody>
+              <tr>
+                <td class="cart-product-img">
+                  <img src="images/backpack.png" width="64px" height="81px" alt="">
+                </td>
+                <td class="cart-product-info">
+                  <span class="cart-product-name">
+                    <span class="cart-product-title">Тип товару</span>
+                    <span class="cart-product-firm">Фірма товару</span>
+                  </span>
+                  <div class="cart-info">
+                    <p><span class="cart-label">Розмір</span><span class="cart-size">20</span></p>
+                    <p><span class="cart-prise">Ціна</span><span class="cart-size">200$</span></p>
+                  </div>
+                </td>
+                <td class="cart-close">
+                  <a href="#">x</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="cart-product-img">
+                  <img src="images/backpack.png" width="64px" height="81px" alt="">
+                </td>
+                <td class="cart-product-info">
+                  <span class="cart-product-name">
+                    <span class="cart-product-title">Тип товару</span>
+                    <span class="cart-product-firm">Фірма товару</span>
+                  </span>
+                  <div class="cart-info">
+                    <p><span class="cart-label">Розмір</span><span class="cart-size">20</span></p>
+                    <p><span class="cart-prise">Ціна</span><span class="cart-size">200$</span></p>
+                  </div>
+                </td>
+                <td class="cart-close">
+                  <a href="#">x</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="cart-product-img">
+                  <img src="images/backpack.png" width="64px" height="81px" alt="">
+                </td>
+                <td class="cart-product-info">
+                  <span class="cart-product-name">
+                    <span class="cart-product-title">Тип товару</span>
+                    <span class="cart-product-firm">Фірма товару</span>
+                    <div class="cart-info">
+                      <p><span class="cart-label">Розмір</span><span class="cart-size">20</span></p>
+                      <p><span class="cart-prise">Ціна</span><span class="cart-size">200$</span></p>
+                    </div>
+                  </span>
+                  
+                </td>
+                <td class="cart-close">
+                  <a href="#">x</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="cart_bottom">
+        <div class="total-row">
+        <p>Кількість: <span>3</span></p>
+        <p>Сума: <span>900$</span></p>
+        </div>
+        <div class="check-link">
+          <a href="#" class="transition">Оформить</a>
+        </div>
+      </div>
+    </div> 
     <header>
       <div class="logo">
         <a href="#"><h1>Dimitrucci</h1></a>
       </div>
       <a class="menu_toggle" href="#"><i class="fa fa-bars" aria-hidden="true"><span>menu</span></i></a>
-      <a class="cart" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+      <a class="cart_icon" href="#"><span>bag</span><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
       <select class="form-control valute">
         <option>$</option>
         <option>€</option>
@@ -67,7 +142,68 @@
       
     </header>
     <div class="wrapper">
-    
+      <div class="container">
+        <div class="catalog-wrap">
+          <div class="row">
+            <div class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <a href="#">
+                <span class="catalog-item-mg">
+                  <img src="images/backpack1.png" width="100%" alt="">
+                </span>
+                <span class="catalog-item-info">
+                  <span class="catalog-item-name">
+                    <span class="product-title-small">Тип товару</span>
+                    <span class="product-firm">Фірма товару</span>
+                  </span>
+                  <span class="catalog-item-price">300$</span>
+                </span>
+              </a>
+            </div>
+            <div class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <a href="#">
+                <span class="catalog-item-mg">
+                  <img src="images/backpack.png" width="100%" alt="">
+                </span>
+                <span class="catalog-item-info">
+                  <span class="catalog-item-name">
+                    <span class="product-title-small">Тип товару</span>
+                    <span class="product-firm">Фірма товару</span>
+                  </span>
+                  <span class="catalog-item-price">300$</span>
+                </span>
+              </a>
+            </div>
+            <div class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <a href="#">
+                <span class="catalog-item-mg">
+                  <img src="images/backpack.png" width="100%" alt="">
+                </span>
+                <span class="catalog-item-info">
+                  <span class="catalog-item-name">
+                    <span class="product-title-small">Тип товару</span>
+                    <span class="product-firm">Фірма товару</span>
+                  </span>
+                  <span class="catalog-item-price">300$</span>
+                </span>
+              </a>
+            </div>
+            <div class="product-item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <a href="#">
+                <span class="catalog-item-mg">
+                  <img src="images/backpack.png" width="100%" alt="">
+                </span>
+                <span class="catalog-item-info">
+                  <span class="catalog-item-name">
+                    <span class="product-title-small">Тип товару</span>
+                    <span class="product-firm">Фірма товару</span>
+                  </span>
+                  <span class="catalog-item-price">300$</span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       
     </div>
   </body>
