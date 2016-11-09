@@ -107,4 +107,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # key to store the cart in the user session
-CASRT_SESSION_ID = 'cart'
+CART_SESSION_ID = 'cart'
