@@ -1,14 +1,26 @@
 $red:red;
 $font:"Raleway", sans-serif;
 body{
-	// overflow: hidden;
 	a:hover, a:visited, a:active, a:focus{
 		text-decoration: none;
 		color: #000;
 	}
 }
-.body_menu{
-	overflow: hidden;
+.loaded{
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 50px;
+	width: 50px;
+	 -webkit-animation: spin 2s linear infinite;
+ 	 animation: spin 2s linear infinite;
+
+} 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 header{
 	background:white;
@@ -18,7 +30,6 @@ header{
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 100;
 	height: 50px;
 	line-height: 50px;
 	.logo{
@@ -39,7 +50,7 @@ header{
 			}
 		}
 	}
-	.menu_toggle:hover span{
+	.menu_toggle:hover span, .cart_icon:hover span{
 		opacity: 1;
 		
 	}
@@ -88,6 +99,7 @@ header{
 
 }
 .cart{
+	height: 100%;
 	background-color: #fff;
 	border: 1px solid black;
 	z-index: 120;
@@ -96,7 +108,6 @@ header{
 	top: 0;
 	bottom: 0;
 	right: 0;
-	padding-bottom: 87px;
 	-webkit-transform: translate3d(300px, 0, 0);
 	-moz-transform: translate3d(300px, 0, 0);
 	-ms-transform: translate3d(300px, 0, 0);
@@ -140,6 +151,13 @@ header{
 	font-weight: 600;
 	padding-right: 10px;
 }
+.cart_top{
+	position: absolute;
+    top: 0px;
+    bottom: 117px;
+    width: 100%;
+	overflow-y: scroll;
+}
 .cart_table{
 	td{
 		padding: 15px 0 0 15px
@@ -154,6 +172,8 @@ table tbody tr .cart-close{
 	font-weight: 800;
 } 
 .cart_bottom{
+	padding-top: 7px;
+	background-color: #fff;
 	font-family: $font;
 	position: fixed;
 	left: 0;
@@ -172,6 +192,7 @@ table tbody tr .cart-close{
 		height: 50px;
 	}
 	.total-row{
+		background-color: #ffffff;
 		text-transform: uppercase;
 		p{
 			margin-left: 20px;
@@ -195,21 +216,18 @@ table tbody tr .cart-close{
 	bottom: 0;
 	letter-spacing: .1875rem;
 	min-height: 500px;
-	z-index: 99;
+	z-index: 120;
 	-webkit-transform: translate3d(-281px, 0, 0);
 	-moz-transform: translate3d(-281px, 0, 0);
 	-ms-transform: translate3d(-281px, 0, 0);
 	-o-transform: translate3d(-281px, 0, 0);
 	transform: translate3d(-281px, 0, 0);
 	.head-sidemenu{
-		-webkit-transform: translate3d(0, -70px, 0);
-		-moz-transform: translate3d(0, -70px, 0);
-		-ms-transform: translate3d(0, -70px, 0);
-		-o-transform: translate3d(0, -70px, 0);
-		transform: translate3d(0, -70px, 0);
+		width: 100%;
+		position: absolute;
+		top: -50px;
 		height: 50px;
-    	vertical-align: 100px;
-		a{ 
+		a{
 			float: left;
 			display:block;
 			padding: 0;
@@ -228,43 +246,19 @@ table tbody tr .cart-close{
 			color: $red;
 		}
 	}
-	.head-sidemenu-vis{
-		-webkit-transform: translate3d(0, 0, 0);
-		-moz-transform: translate3d(0, 0, 0);
-		-ms-transform: translate3d(0, 0, 0);
-		-o-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-		-webkit-transition: all 1.2s;
-		-moz-transition: all 1.2s;
-		transition: all 1.2s;
-	}
 	.menu{
 		text-transform: uppercase;
 		font-family: "Raleway", sans-serif;
 		font-weight: 600;
 		font-size: 10px;
 		margin-top: 130px;
+		position: absolute; 
+		width: 100%;
+		left:-300px; 
 		.ul_menu{
-			opacity: 0;
 			padding: 0;
 			width: 100%;
 			list-style: none;
-			-webkit-transform: translate3d(-200px, 0, 0);
-		    -moz-transform: translate3d(-200px, 0, 0);
-		    -ms-transform: translate3d(-200px, 0, 0);
-		    -o-transform: translate3d(-200px, 0, 0);
-		    transform: translate3d(-200px, 0, 0); 
-		}
-		.ul_menu_m{
-			-webkit-transition: all 1.5s;
-			-moz-transition: all 1.5s;
-			transition: all 1.5s;
-			opacity: 1;
-			-webkit-transform: translate3d(0, 0, 0);
-	  		-moz-transform: translate3d(0, 0, 0);
-	  		-ms-transform: translate3d(0, 0, 0);
-	  		-o-transform: translate3d(0, 0, 0);
-	  		transform: translate3d(0, 0, 0); 
 		}
 		a{
 			color:white;
@@ -323,9 +317,22 @@ table tbody tr .cart-close{
 .lang{
 	margin-right: 3%;
 }
-.w_for_menu, .header_f_m{
-	// pointer-events: none; /* делаем элемент неактивным для взаимодействия */
-	// cursor: default; /*  курсор в виде стрелки */
+.wrapper{
+	padding-top: 50px;
+}
+.wrapper_body{
+	// opacity: 0;
+	// display: none;
+	position: relative;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s; 
+	transition: all 0.5s;
+}
+.wrapper_body_m{
+ 	opacity:0.3; 
+ 	-moz-opacity:0.3;
+	filter:alpha(opacity=40);
+	cursor: default; 
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
@@ -335,7 +342,10 @@ table tbody tr .cart-close{
 	-o-transform: translate3d(281px, 0, 0);
 	transform: translate3d(281px, 0, 0); 
 }
-.w_for_cart, .header_f_c{
+.wrapper_body_c{
+	opacity:0.3; 
+ 	-moz-opacity:0.3;
+	filter:alpha(opacity=40);
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
@@ -344,4 +354,28 @@ table tbody tr .cart-close{
 	-ms-transform: translate3d(-300px, 0, 0);
 	-o-transform: translate3d(-300px, 0, 0);
 	transform: translate3d(-300px, 0, 0); 
+}
+::-webkit-scrollbar-button { 
+width:0px; 
+height:0px 
+} 
+
+::-webkit-scrollbar-track { 
+background-color:transparent; 
+} 
+
+::-webkit-scrollbar-thumb { 
+-webkit-border-radius: 3px; 
+border-radius: 3px; 
+background-color:black; 
+height: 2px;
+} 
+
+::-webkit-resizer{ 
+width:5px; 
+height:0px 
+} 
+
+::-webkit-scrollbar{ 
+width: 8px; 
 }
