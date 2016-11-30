@@ -1,7 +1,6 @@
 $(window).on('load', function () {
-	$(".wrapper_body").fadeOut(0);
-    $('.loaded').delay(100).fadeOut(1000);
-    $(".wrapper_body").delay(500).fadeIn(1000);
+    $('.loaded').delay(600).fadeOut(1000);
+    $(".wrapper_body").delay(600).fadeIn(300);
 });
 $(document).ready(function(){
 	$(".menu_toggle").click(function(){

@@ -1,5 +1,6 @@
 $red:red;
 $font:"Raleway", sans-serif;
+
 body{
 	a:hover, a:visited, a:active, a:focus{
 		text-decoration: none;
@@ -228,6 +229,9 @@ table tbody tr .cart-close{
 		top: -50px;
 		height: 50px;
 		a{
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			transition: all 0.5s;
 			float: left;
 			display:block;
 			padding: 0;
@@ -261,6 +265,7 @@ table tbody tr .cart-close{
 			list-style: none;
 		}
 		a{
+			font-weight: 600;
 			color:white;
 			letter-spacing: .1875rem;
 			display: block;
@@ -272,6 +277,7 @@ table tbody tr .cart-close{
 		}
 
 		li:hover a{
+			font-weight: 900;
 			color: $red;
 		}
 		li:hover{
@@ -283,6 +289,7 @@ table tbody tr .cart-close{
 		.active{
 			background-color: #121212;
 			a{
+				font-weight: 900;
 				color: $red;
 			}
 		}
@@ -321,8 +328,7 @@ table tbody tr .cart-close{
 	padding-top: 50px;
 }
 .wrapper_body{
-	// opacity: 0;
-	// display: none;
+	display: none;
 	position: relative;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s; 
